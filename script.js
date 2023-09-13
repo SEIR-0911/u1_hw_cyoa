@@ -50,15 +50,20 @@ function showOption(option) {
 }
 
 // option selected - I had to watch a Web Dev Simplified video on YouTube to figure this part out.
-function selectOption(option) {
-    const nextTextNodeId = option.nextText
-    if (nextTextNodeId <= 0) {
-        return startGame()
-    }
-    state = Object.assign(state, option.setState)
-    showTextNode(nextTextNodeId)
 
+// changed this to a switch statement, and only a few things broke. As of now, it all works!
+function selectOption(option) {
+    const nextTextNodeId = option.nextText;
+    
+    switch (true) {
+        case nextTextNodeId <= 0:
+            return startGame();
+        default:
+            state = Object.assign(state, option.setState);
+            showTextNode(nextTextNodeId);
+    }
 }
+
 
 const textNodes = [
     {
