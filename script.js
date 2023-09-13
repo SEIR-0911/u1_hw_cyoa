@@ -160,4 +160,4 @@ if (parseInt(beginVacation) === 1){
     alert(`I guess you decided to hang by the pool today.`)
 }
 
-
+location.reload()
