@@ -1,3 +1,13 @@
+/**
+ * Requirements
+ * Any path the user goes down must ask them at least three questions.
+ * There must be a minimum of seven total destinations the user could arrive at based on their responses.
+ * For at least one of the questions asked, there must be more than two possible user responses.
+ * Your adventure must offer the user an option to replay at the end.
+ * Your code must contain at least one switch statement.
+ * Your code must make use of both string and number user inputs.
+ */
+
 let player = prompt("Hey Stranger! What's your name?");
 if (player != null) {
     alert(` Welcome ${player} to
@@ -23,6 +33,7 @@ while (gameOn === true) {
 
             1. Continue your descent.
             2. Try to climb back up.
+            3. Call out to the White Rabbit.
             `);
             console.log(`You picked ${followWhatIsNext}`);
 
@@ -31,6 +42,21 @@ while (gameOn === true) {
             } else if (followWhatIsNext == 2) {
                 alert(`You end up in the Queen of Hearts' court, where you become a beloved guest. The Queen throws a grand party in your honor. She lets you go, and you leave Wonderland with cherished memories.
                 `);
+            } else if (followWhatIsNext == 3) {
+                let askWhiskers = prompt(`The White Rabbit introduces itself as Mr. Whiskers and explains that he's late for a very important meeting with the Wonderland Council. However, he's willing to take a moment to assist you.
+
+                1. Ask Mr. Whiskers for directions or help.
+                2. Let him go on his way and continue falling.
+                `);
+                if (askWhiskers == 1) {
+                    alert(`You follow Mr. Whiskers through the whimsical world of Wonderland, encountering strange characters and delightful adventures. Eventually, Mr. Whiskers fulfills his commitment to the Wonderland Council and leads you safely back home.
+                    `);
+                } else if (askWhiskers == 2) {
+                    alert(`You decide to let Mr. Whiskers go on his way to his important meeting. As you continue falling, your journey through Wonderland unfolds in mysterious and unexpected ways, leading you to new and exciting adventures.\n\nIn the end, you discover a hidden portal that takes you back to your own world, leaving you with a sense of wonder and the memories of your extraordinary adventure.`)
+                } else {
+                    alert(`Game over ${player}! you can't do this!\nBut you can start over!`);
+                }
+
             } else {
                 alert(`Game over ${player}! you can't do this!\nBut you can start over!`);
             }
