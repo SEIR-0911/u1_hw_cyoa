@@ -1,0 +1,82 @@
+Homework Overview
+Using what you know about data types, variables, operators, conditional blocks, and accepting user input, you'll be creating a text-based game that allows the user to arrive at different "destinations" based on the inputs they type.
+
+Requirements
+Any path the user goes down must ask them at least three questions.*
+
+There must be a minimum of seven total destinations the user could arrive at based on their responses.*
+
+For at least one of the questions asked, there must be more than two possible user responses.*
+
+Your adventure must offer the user an option to replay at the end.*
+
+Your code must contain at least one switch statement.**
+
+Your code must make use of both string and number user inputs.*
+
+Hint: You may need :
+
+* parseInt()
+* toString()
+* prompt
+* confirm ()
+* alert
+
+//ex1
+// prompts user and stores value in the variable
+let valueOfPrompt = prompt()
+// logs value stored
+console.log(valueOfPrompt)
+
+//ex2
+let age = prompt('How old are you?')
+// ES6 String Interpolation
+alert(`You are ${age} years old.`)
+// ES5 Version
+alert('You are ' + age + ' years old.')
+
+Idea: Simple Eggcellent Egg Cooking Guide/Outcome Algorithm
+
+
+                                        Start
+                            boiledCooked(bc)   panCooked(pc)
+                    hard(h)    medium(m)  soft       scrambled   sunny   overEasy fried
+                        Medium(R)   MediumS
+                    d       d           d     d     d        d        d       d             
+                    
+Messages: view = word wrap for better view experience on vs code
+
+`Welcome to the Simple Eggcellent Egg Cooking Guide/Outcome Algorithm!
+Please enter your Name here: {anon}`
+
+`Welcome {anon}, depending on how you want your eggs cooked, I will provided you with step by step instructions. Now, how do you like your eggs?? Please type 'bc' or 'pc' without quotations for boiledCooked or panCooked.`
+Options: bc/pc 
+    Option: bc from user input
+    `Great! Now how do you like them boilded? Please type 'h' or 'm' or 's' without quotations for hard, medium or soft boiled eggs in the console.`
+        Option: h/m/s
+            if choose Option: h from user input
+            `Directions: (Step1) Place eggs in a saucepan, cover with water. (Step2) Boil for 9-12 minutes. (Step3) Transfer to ice water, peel when cool.`
+            if choose Option: m from user input
+                `Great! Now how medium do you like them boiled? Please type 'rm' or 'sm' without quotations for regular medium or soft medium boiled eggs in the console.`
+                    if choose Option: rm from user input
+                    `Directions: (Step1) Place eggs in a saucepan, cover with water. (Step2) Boil for 7-9 minutes. (Step3) Transfer to ice water, peel when cool.`
+                    if choose OptionL sm from user input
+                    `Directions: (Step1) Place eggs in a saucepan, cover with water. (Step3) Boil for 5-8 minutes for a slightly firm but still soft yolk. (Step3) Transfer to ice water, peel when cool.`
+            if choose Option: s from user input
+            `Directions: (Step1) Place eggs in a saucepan, cover with water. (Step2) Boil for 4-7 minutes for a runny yolk. (Step3) Serve immediately in an egg cup.`
+    if choose Option pc:
+    `Great! Now how do you like them Pan Cooked? Please type 'scrambled' or 'sunnysideup' or 'overeasy' or 'fried' without quotations, all lowercase with and with no spaces in the console.`
+        if choose Option: scrambled from user input
+            `Directions: (Step1) Crack the desired number of eggs into a bowl and, if desired, season them with a pinch of salt and pepper. Whisk the eggs until the yolks and whites are well combined. (Step2) Heat a non-stick skillet over medium-low heat and, if you prefer, add a small amount of butter or oil to the skillet for extra flavor and to prevent sticking. (Step3) Pour the whisked eggs into the skillet. Let them cook undisturbed for a few seconds until the edges start to set. (Step4) Gently stir and fold the eggs using a spatula, pushing them from the edges toward the center. Continue to cook, stirring occasionally, until the eggs reach your desired level of doneness (usually about a minute or so). (Step5) Remove the skillet from heat immediately to avoid overcooking. Serve your fluffy scrambled eggs.`
+        if choose Option: sunnysideup from user input
+            `Directions: (Step1) Heat a non-stick skillet over low to medium-low heat. You want to maintain gentle heat to cook the eggs evenly without browning.(Step2) If you prefer, add a small amount of butter or oil to the skillet for added flavor.(Step3) Crack the eggs into the skillet one at a time, making sure not to break the yolks. Season the eggs with a pinch of salt and pepper if you like.(Step4) Allow the eggs to cook uncovered until the whites are set but the yolks remain beautifully runny. This usually takes about 2-3 minutes.(Step5) Carefully use a spatula to lift and transfer the sunny-side-up eggs to a plate, keeping the yolks intact.`
+        if chose Option: overeasy from user input
+            `Directions: (Step1) Heat a non-stick skillet over low to medium-low heat and add a small amount of butter or oil if desired. (Step2) Crack the eggs into the skillet, being careful not to break the yolks. Season with a pinch of salt and pepper if you prefer.(Step3) Allow the eggs to cook uncovered until the whites are set but the yolks remain runny, which usually takes about 2 minutes.(Step4) Gently slide a spatula under each egg and flip it over. Be cautious not to break the yolks.(Step5) Cook the flipped eggs for an additional 20-30 seconds to set the whites on the other side. (Step6) Transfer the over-easy eggs to a plate and enjoy. `
+        if choose Option: fried from user input
+            `Directions: (Step2) Heat a non-stick skillet over low to medium-low heat and add a small amount of butter or oil if desired. (Step2) Crack the eggs into the skillet, taking care not to break the yolks. Season the eggs with a pinch of salt and pepper if you like.(Step3) Allow the eggs to cook uncovered until both the whites and yolks are fully set, typically taking about 3-4 minutes. (Step4) Carefully use a spatula to lift and transfer the fried eggs to a plate. Serve your delicious fried eggs as desired.`
+
+if choose a non option the console log Error Message: `Please Re-Run the game, invalid entry!`
+if you recived your directions the console log Ask for a rating and `Restart game for a diffrent set of cooking directions`
+
+
+                                                                  
